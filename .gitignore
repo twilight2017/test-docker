@@ -6,7 +6,7 @@ bin-release/
 venv
 # Other files and folders
 .settings/
-
+test_docker/venv
 # Executables
 *.swf
 *.air
