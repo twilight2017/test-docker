@@ -2,6 +2,7 @@
 import argparse
 from tempfile import mkdtemp
 import toml
+import sys
 import shutil
 from loguru import logger
 
@@ -48,7 +49,7 @@ def cli():
     # 5.1用try-cache实现build过程
     try:
         project = Project(default_conf)
-        build(project, tmp_dir, args.use_cahche)  # 需要传入是否使用cache的参数
+        build(project, tmp_dir, args.use_cache)  # 需要传入是否使用cache的参数
     except TDockerError as e:
         sys.exit(str(e))
     finally:
